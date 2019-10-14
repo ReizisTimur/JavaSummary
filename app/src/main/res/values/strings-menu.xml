@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="hightLevel">
+        <item>Теория</item>
+        <item>Практика</item>
+        <item>Android</item>
+        <item>Git</item>
+    </string-array>
+    <string-array name="practicaLevel">
+        <item>Примитивные типы</item>
+        <item>Синтаксис классов и методов</item>
+        <item>Библиотечные объекты и методы</item>
+        <item>Литераторы и экспоненциальная запись</item>
+        <item>Операторы</item>
+        <item>Управляющие конструкции</item>
+    </string-array>
+    <string-array name="OperatorsMenuAr">
+        <item>Присваивание</item>
+        <item>Математические операторы</item>
+        <item>Операторы сравнения</item>
+        <item>Логические операторы</item>
+        <item>Поразрядные операторы</item>
+        <item>Операторы сдвига</item>
+        <item>Операторы приведения</item>
+        <item>+ и += для String</item>
+        <item>Тернарный оператор</item>
+    </string-array>
+</resources>
