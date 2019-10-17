@@ -11,16 +11,16 @@
             BigInteger — целое число для операций повышенной точности\n
             BigDecimal — число с фиксированной запятой для операций повышенной точности\n
     </string>
-    <string name="sintClMeString">
-        Объявление метода:\n
-        возвращаемыйТип ИмяМетода(список аргументов){тело метода}\n\n
-        Вызов метода объекта:\n
-        имяОбъекта.имяМетода(значения аргументов)\n\n
-        Доступ к полю класса: \n
-        имяОбъекта.переменная\n\n
-        Метод возвращает значение с помощью return. Если нет то возвращаемый тип void \n\n
-        Static — данные или методы не привязаны к определенному экземпляру класса. Можно вызывать, даже если не создано ни одного объекта:\n
-        имяКласса.статическиеДанные
+    <string name="BazovyeVeschi">
+        Объявление класса:  class имя{}\n
+        Создание объекта имяКласса имяОбъекта = new имяКласса();\n
+        Объявление метода: возвращаемыйТип ИмяМетода(список аргументов){тело метода}\n
+        Вызов метода объекта: имяОбъекта.имяМетода(значения аргументов) \n
+        Доступ к полю класса:   имяОбъекта.переменная\n
+        Метод возвращает значение с помощью return. Если нет то возвращаемый тип void\n
+        Static — данные или методы не привязаны к определенному экземпляру класса.
+        Для них не существует ссылки this. Можно вызывать, даже если не создано ни о
+        дного объекта:\n имяКласса.статическиеДанные
     </string>
     <string name="BiblObjMethString">
         Создание генератора начальных значений:\n
@@ -125,5 +125,158 @@
         do{команды}while(логическое выражение) выполняется один раз, если логическое выражение true,
         повторяет цикл
     </string>
+    <string name="TextView1">
+        Создание в layout:\n
+        &lt;TextView\n
+        android:layout_width="wrap_content"\n
+        android:layout_height="wrap_content"\n
+        android:text="текст"  // или ссылка на ресурс string @string/имя string\n
+        >/
+    </string>
+    <string name="TextView2">
+        Создание в активности:\n
+        LinearLayout linearLayout = new LinearLayout(this);\n
+        TextView textView1 = new TextView(this);\n
+        textView1.setText("текст или ссылка на ресурс");\n
+        textView1.setLayoutParams(layoutParams);\n
+        linearLayout.addView(textView1);\n
+        setContentView(linearLayout);\n
+    </string>
+    <string name="AdaptersAndLists1">
+        Списки являются наследниками класса android.widget.AdapterView
+    </string>
+    <string name="ListView1">
+        Представление массива переменных в виде списка\n
+        Варианты создания:\n
+    </string>
+    <string name="ListView2">
+                LAYOUT\n
+        &lt;ListView\n
+            android:id="@+id/nameList" \\определяем ListView\n
+            android:entries="@+id/nameMassive" \\ ссылка на ресурс массива\n
+        />\n
+                VALUES\n
+        &lt;string-array name="@array/nameMassive">\n
+            &lt;item>item1&lt;/item>\n
+            &lt;item>item2&lt;/item>\n
+            &lt;item>item3&lt;/item>\n
+        &lt;/string-array>\n
+    </string>
+    <string name="ListView3">
+                2. Размещение массива в коде\n
+        LAYOUT\n
+        &lt;ListView\n
+            android:id="@+id/nameList" \\определяем ListView\n
+        />\n
 
+        В активности:\n
+        String[] nameMassive = { "item1", "item2", "item3"};\n
+        ListView имя = (ListView) findViewById(R.id.nameList);  //получаем элемент ListView из файла разметки\n
+        ArrayAdapter&lt;String> adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, countries); // создаем адаптер и подключаем массив\n
+        имя.setAdapter(adapter);
+    </string>
+    <string name="resurs">
+        Обращение к ресурсам из активности:\n
+        String application_name =  getResources().getString(R.string.app_name);\n
+        Массив строк:\n
+        &lt;string-array name="Имя">\n
+            &lt;item>имя&lt;/item>\n
+        ...\n
+        &lt;/string-array>\n
+    </string>
+    <string name="PerDanActAr">
+        Для передачи данных применяется метод putExtra(), который в качестве значения позволяет передать
+        данные простейших типов - String, int, float, double, long, short, byte, char, массивы этих типов, либо объект интерфейса Serializable:\n
+        intent.putExtra("ключ", значение);\n
+        Чтобы получить отправленные данные при загрузке SecondActivity, можно воспользоваться методом get(), в который передается ключ объекта:\n
+        Bundle ИмяОбъектаBundle = getIntent().getExtras();\n
+        переменная = ИмяОбъектаBundle.get("ключ")
+    </string>
+    <string name="gitOsnova">
+        .git/config файл настройки с секциями [core], [user] и .т.д. подсекциями [diff "png']\n
+        уровни настроек --global (в домашней директории) --system  --local\n
+        git config user.name "имя пользователя"\n
+        git config user.email "почта"\n
+        git config --list  вывести все настройки\n
+        git config --unset удалить параметр\n
+        git config --remove-section удалить определенную секцию\n
+        get help команда \n
+        git config --edit  или -e открыть файл настроек в редакторе\n
+        git config --global core.editor настройка редактора для файлов настроек\n
+        git config --global alias.c config  назначить автозамену "config" на "с"\n
+        … alias.c '!команда1; команда2;'     автозамена "c" на несколько команд\n
+        git config include.path   подключить доп. файл настроек, --add добавить не затирая старую настройку
+    </string>
+    <string name="TypesFiles">
+        core.autocrlf настройка переноса строки в текстовых файлах. True — Windows (файл сохраняется в юникс-кодировке, при открытии переводится в Windows кодировку), input — Unix ( файл сохраняется и открывается в юникс-кодировке), false — не менять кодировку\n
+        &lt;project>/.gitattributes или &lt;project>/.git/info/attrebutes /etc/gitattributes правила по которым гит определяет типы файлов\n
+        *text =auto  git определяет тип файла по содержимому\n
+        *.html text     текстовый файл\n
+        *.gif -text     или .gif  binary бинарный\n
+        *sln text eol=crlf   настройка переноса строк\n
+        git help attributes справка\n
+    </string>
+    <string name="gitIgnore">
+        Папки и директории, которые git игнорирует. .gitignore читается последовательно\n
+        .DS_Store\n
+        *.log шаблон\n
+        *.py[co]   это *.pyc или *.pyo\n
+        migrate-201[5-7]  это migrate-2015  migrate-2016 migrate-2017\n
+        ?  один произвольный символ\n
+        * множество символов, но не слеш\n
+        /*/ любая вложенная папка\n
+        /**/ несколько втожений\n
+        ! отменяет исключение\n
+        build/  любая папка build в проекте\n
+        Если слеш находтся не в конце шаблон читается как основной путь от места расположения .gitignore\n
+        /build/    папка в корне\n
+        secret/key  или /secret/key путь от корня\n
+        doc/*.html файлы в директории doc которая в корне\n
+        Не работает, так как git не узнает о существовании файла packages.xml:\n
+        /install/\n
+        !install/packages.xml\n
+        Правильно\n
+        /install/*\n
+        !install/packages.xml\n
+        git check-ignore - v путь     проверка исключений\n
+        Возможные местоположения исключений\n
+        &lt;project>/.../.gitignore\n
+        &lt;project>/.git/infj/excludes\n
+        config: core.exludeFile\n
+    </string>
+    <string name="SozdRepCom">
+        Рабочая директория, index — список файлов отслеживаемых git и промежуточное хранилище, репазиторий \n
+        git init создает папку .git\n
+        git status информация о статусе файлов проекта\n
+        git add файл    проиндексировать файл. git add .   добавить все. -f добавить игнорируемый файл. -p спрашивать про каждое изменение\n
+        git commit закоммитить проиндексированные файлы (--author=\u0027имя &lt;email>\u0027  отдельно указать автора  --date авторская дата)\n
+        git show посмотреть текущий коммит\n
+        git reset HEAD файл     отменить индексацию\n
+        Закачать коммит на github:\n
+        git remote add origin https://github.com/.../*.git\n
+        git push -u origin master
+    </string>
+    <string name="InitAndFinish">
+        Конструктор — метод инициализации объекта. Имя конструктора совпадает с именем класса. \n
+        new класс() сразу запускает конструктор\n
+        Конструктор без аргументов — конструктор по умолчанию.\n
+        Передача аргумента конструктору: класс объект = new класс(аргументы)\n
+    </string>
+    <string name="Peregruzka_metodov">
+        Можно иметь в классе несколько конструкторов, которые будут различаться по типу аргументов
+    </string>
+    <string name="This">
+        Ссылка на текущий объект. Может использоваться в связке с командой return для возврата
+        ссылки на объект. Может использоваться для ссылки на текущий объект в методе, внешнем по
+        отношению  к объекту. (стр 153 Философия Java)\n
+        При вызове одного конструктора из другого this(аргументы) вызывает конструктор с
+        соответствующими аргументами. Вызвать таким способом можно только один конструктор и
+        вызов должен быть первой исполняемой операцией.\n
+        Ссылка на поле данных класса: this.поле\n
+    </string>
+    <string name="finalize">
+        Finalize() - метод, запускаемый уборщиком мусора перед  стиранием объекта. Определяется в
+        теле класса. Может использоваться для проверки условия готовности объекта — можно ли стирать
+        объект, все ли его части должным образом закрыты (стр161 Философия Java).
+    </string>
 </resources>

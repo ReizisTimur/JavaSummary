@@ -26,8 +26,7 @@ public class practica extends AppCompatActivity {
                         PrimTypeIntent.putExtra("Page", "primitiveTypes");
                         startActivity(PrimTypeIntent);break;
                     case 1:  //Синтаксис класов и методов
-                        Intent ClassMethIntent = new Intent(practica.this, TextForm.class);
-                        ClassMethIntent.putExtra("Page", "SCM");
+                        Intent ClassMethIntent = new Intent(practica.this, SintClassMeth.class);
                         startActivity(ClassMethIntent);break;
                     case 2:  //Библиотечные объекты и методы
                         Intent BiblObjMethIntent = new Intent(practica.this, TextForm.class);
@@ -39,7 +38,7 @@ public class practica extends AppCompatActivity {
                         startActivity(LiteratIntent);break;
                     case 4:   //Операторы
                         Intent OperatorsIntent = new Intent(practica.this, Operators.class);
-                        startActivity(OperatorsIntent);
+                        startActivity(OperatorsIntent);break;
                     case 5:  //Управляющие конструкции
                         Intent UprKonsIntent = new Intent (practica.this, TextForm.class);
                         UprKonsIntent.putExtra("Page", "UK");

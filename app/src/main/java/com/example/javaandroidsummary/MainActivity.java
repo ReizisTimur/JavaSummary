@@ -29,7 +29,14 @@ public class MainActivity extends AppCompatActivity {
                     //переход на меню Практика
                     case 1:
                         Intent practicaIntent = new Intent(MainActivity.this, practica.class);
-                        startActivity(practicaIntent);
+                        startActivity(practicaIntent);break;
+                    //переход в меню Андроид
+                    case 2:
+                        Intent androidIntent = new Intent(MainActivity.this, Android.class);
+                        startActivity(androidIntent);break;
+                    case 3:  //Git
+                        Intent gitIntent = new Intent (MainActivity.this, git.class);
+                        startActivity(gitIntent);break;
                 }
             }
         };

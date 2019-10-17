@@ -25,4 +25,38 @@
         <item>+ и += для String</item>
         <item>Тернарный оператор</item>
     </string-array>
+    <string-array name="AndroidMenuAr">
+        <item>Основные элементы интерфейса</item>
+        <item>Адаптеры и списки</item>
+        <item>Ресурсы</item>
+        <item>Activity</item>
+    </string-array>
+    <string-array name="OsnElemItnerfAr">
+        <item>TextView</item>
+        <item>"    "</item>
+    </string-array>
+    <string-array name="AdaptAndListAr">
+        <item>ListView</item>
+        <item>"    "</item>
+    </string-array>
+    <string-array name="activity">
+        <item>Передача данных между активностями</item>
+        <item>"       "</item>
+    </string-array>
+    <string-array name="git">
+        <item>Настройка</item>
+        <item>Создание репозитория и коммиты</item>
+    </string-array>
+    <string-array name="gitConfig">
+        <item>Основы настройки git</item>
+        <item>Типы файлов и переносы строк</item>
+        <item>.gitignore</item>
+    </string-array>
+    <string-array name="SyntaksisClassovMethodov">
+        <item>Базовые вещи</item>
+        <item>Инициализация и завершение</item>
+        <item>Перегрузка методов</item>
+        <item>This</item>
+        <item>Finalize()</item>
+    </string-array>
 </resources>

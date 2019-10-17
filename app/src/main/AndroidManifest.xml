@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TextForm"></activity>
+        <activity android:name=".SintClassMeth"></activity>
+        <activity android:name=".git_config" />
+        <activity android:name=".git" />
+        <activity android:name=".Activity_activity" />
+        <activity android:name=".adapters_and_lists" />
+        <activity android:name=".OsnEleleInterface" />
+        <activity android:name=".Android" />
+        <activity android:name=".TextForm" />
         <activity android:name=".OperatorsLayer" />
         <activity android:name=".Operators" />
         <activity android:name=".practica" />
